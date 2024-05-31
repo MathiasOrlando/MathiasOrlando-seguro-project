@@ -1,0 +1,7 @@
+{
+  "name": "clientes_asegurados",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
