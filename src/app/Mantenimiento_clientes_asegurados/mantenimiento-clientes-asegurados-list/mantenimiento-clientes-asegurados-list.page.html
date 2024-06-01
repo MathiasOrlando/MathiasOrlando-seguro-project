@@ -1,4 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar *ngIf="!isSearch">
+    <ion-title><ion-header [translucent]="true">
+  <ion-toolbar *ngIf="!isSearch">
+    <ion-title>Asegurados</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="clickSearch()">
+        <ion-icon slot="end" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 
+  <ion-toolbar *ngIf="isSearch">
+    <ion-searchbar show-cancel-button="always" 
+    show-clear-button="always" 
+    (ionClear)="clearSearch()" 
+    (ionChange)="buscarSearch($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="clickSearch()">
+        <ion-icon slot="end" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="isSearch">
+    <ion-searchbar show-cancel-button="always" 
+    show-clear-button="always" 
+    (ionClear)="clearSearch()" 
+    (ionChange)="buscarSearch($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
   <ion-grid>
