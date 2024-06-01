@@ -10,6 +10,15 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+
+  {
+    path: 'mantenimiento-clientes-asegurados-list',
+    loadChildren: () => import('./Mantenimiento_clientes_asegurados/mantenimiento-clientes-asegurados-list/mantenimiento-clientes-asegurados-list.module').then( m => m.MantenimientoClientesAseguradosListPageModule)
+  },
+  {
+    path: 'mantenimiento-clientes-asegurados-edit',
+    loadChildren: () => import('./Mantenimiento_clientes_asegurados/mantenimiento-clientes-asegurados-edit/mantenimiento-clientes-asegurados-edit.module').then( m => m.MantenimientoClientesAseguradosEditPageModule)
   }
 ];
 
@@ -20,3 +29,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
